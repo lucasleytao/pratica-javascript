@@ -1,5 +1,5 @@
 
-//** Lista de exercícios 1 **
+//** Pratica - lista 1 **
 
 //1. Faça um Programa que mostre a mensagem "Alo mundo" na tela.
 console.log('Hello word!')
@@ -104,6 +104,40 @@ console.log(`O peso ideal para a altura ${am}m corresponde a: ${formm.toFixed(2)
 
 // 14. João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
 
+let peso = 80
+let exc = peso - 50
+let mlt = 4 * exc
+
+if (exc > 0) {
+    console.log(`ATENÇÃO! ** Quantidade total * ${exc} kg acima do limite estabelecido`)
+    console.log(`Multa: ${mlt} reais`)
+} else  {
+    console.log('LIBERADO! ** Quantidade de Kg dentro do limite estabelecido!')
+}
+
+// 15. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+// . salário bruto.
+// a. quanto pagou ao INSS.
+// b. quanto pagou ao sindicato.
+// c. o salário líquido.
+// d. calcule os descontos e o salário líquido, conforme a tabela abaixo: e. + Salário Bruto : R$ f. - IR (11%) : R$ g. - INSS (8%) : R$ h. - Sindicato ( 5%) : R$ = Salário Liquido : R$
+// Obs.: Salário Bruto - Descontos = Salário Líquido.
+let hra = 8 //horas dia
+let valorh = 9.375 //valor hora
+let sal = valorh * hra * 24 //salario mes
+let ir = (sal * 11)/100
+let inss = (sal * 8)/100
+let sind = (sal * 5)/100
+
+console.log('** Holerite')
+
+console.log(`+ Salário Bruto: ${sal}`)
+console.log('-----------------------------')
+console.log('- Imposto de Renda (11%): '+ ir)
+console.log('- INSS (8%): '+ inss)
+console.log('- Sindicato (5%)'+ sind)
+console.log('-----------------------------')
+console.log('= Salário Líquido: '+ (sal-ir-inss-sind))  
 
 
 
