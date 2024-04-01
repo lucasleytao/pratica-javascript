@@ -139,6 +139,52 @@ console.log('- Sindicato (5%)'+ sind)
 console.log('-----------------------------')
 console.log('= Salário Líquido: '+ (sal-ir-inss-sind))  
 
+// 16. Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+let mq = 200
+let plt = 80
+let cb = mq / 3
+let tl = cb / 18
+
+console.log('** Bem-vindo à loja de tintas ``ClareCor``')
+console.log('Metros quadrados informado: '+ mq)
+console.log('Cobertura total em litros: ' + Math.ceil(cb)) //arredondamento para cima
+console.log('Preço total: '+ Math.ceil(tl) * plt)
+
+// 17. Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+// o Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+// o comprar apenas latas de 18 litros;
+// o comprar apenas galões de 3,6 litros;
+// o misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+
+let mqd = 500
+let pl = 80
+let pg = 25
+let cob = mqd / 6
+let tot1 = cob / 18
+let tot2 = cob / 3.6
+
+if (mqd > 108) {
+    let ptm = Math.floor(tot1) * pl + Math.ceil((cob % 18) / 3.6) * pg //resto da divisao de cob por 18
+    console.log('** Bem-vindo à loja de tintas ``ClareCor``')
+    console.log('Metros quadrados informado: '+ mqd)
+    console.log('Cobertura total em litros: ' + Math.ceil(cob)) //arredondamento para cima
+    console.log('Preço total (latas de 18 litros): '+ Math.ceil(tot1) * pl)
+    console.log('Preço total (refil de 3,6 litros): '+ Math.ceil(tot2) * pg)
+    console.log('Preço total com mistura de latas e refil: '+ ptm)
+}
+
+else if (mqd <= 108) {
+    let ptm = Math.ceil(tot1) * pl
+    console.log('** Bem-vindo à loja de tintas ``ClareCor``')
+    console.log('Metros quadrados informado: '+ mqd)
+    console.log('Cobertura total em litros: ' + Math.ceil(cob)) //arredondamento para cima
+    console.log('Preço total (latas de 18 litros): '+ Math.ceil(tot1) * pl)
+    console.log('Preço total (refil de 3,6 litros): '+ Math.ceil(tot2) * pg)
+    console.log('Preço total com mistura de latas e refil: '+ ptm)
+}
+
+// 18. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
 
 
 
