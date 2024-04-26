@@ -184,7 +184,19 @@ else if (mqd <= 108) {
 }
 
 // 18. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+let ta = prompt("Informe o tamanho do arquivo em Mb: ")
+let vl = prompt("Informe a velocidade da internet em Mbps: ")
+console.log(`Tamanho do arquivo: ${ta} Mb`)
+console.log(`Velocidade da internet: ${vl} Mbps`)
 
+let cal = ta/vl
+
+if(cal < 1) {
+    console.log(`O tempo de download corresponde a ${cal} décimos de segundo`)
+} else {
+    console.log(`O tempo de download corresponde a ${cal} segundo(s)`)
+    console.log('Em minutos corresponde a: ' + ((cal/60).toFixed(2)) + ' min')
+}
 
 
 
